@@ -3,35 +3,36 @@
 
 
 {% for product in inventory %}
-    <article>
-        <div>
-            <section>
+    <article id="product-display">
+        <div id="product-info">
+            <section class="product-item">
                 <h2>Name of Product:</h2>
                 {{product.name}}
             </section>
-            <section>
+            <section class="product-item">
                 <h2>Decription:</h2>
                 {{product.description}}
             </section>
-            <section>
+            <section class="product-item">
                 <h2>Supplier Name:</h2>
                 {{product.supplier.name}}
             </section>
         </div>
-        <div>
-            <section>
+        <div id="product-maths">
+            <section class="product-item">
                 <h2>Wholesale Price:</h2>
                 <p>£{{product.cost_price}}</p>
             </section>
-            <section>
+            <section class="product-item">
                 <h2>Retail Price:</h2>
                 <p>£{{product.sale_price}}</p>
             </section>
-            <section>
+            <section class="product-item">
                 <h2>Current Stock Level:</h2>
                 {{product.in_stock}}
             </section>
         </div>
+        <a href="/products/{{product.id}}"><button>View Product</button></a>
     </article>
     
 {% endfor %}
