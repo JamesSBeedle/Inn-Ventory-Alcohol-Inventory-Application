@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <!-- <article>
+
+        <p>{{product.name}}</p>
+        <p>{{product.supplier.name}}</p>
+        <p>{{product.description}}</p>
+        <br>
+        <br>
+        <br>
+        <p>£{{product.cost_price}}</p>
+        <p>£{{product.sale_price}}</p>
+        <br>
+        <br>
+        <p>{{product.in_stock}}</p>
+
+    </article>
+     -->
+     <article id="product-single">
+        <div id="product-info">
+            <section class="product-item">
+                <h2>Name of Product:</h2>
+                {{product.name}}
+            </section>
+            <section class="product-item">
+                <h2>Decription:</h2>
+                {{product.description}}
+            </section>
+            <section class="product-item">
+                <h2>Supplier Name:</h2>
+                {{product.supplier.name}}
+            </section>
+        </div>
+        <div id="product-maths">
+            <section class="product-item">
+                <h2>Wholesale Price:</h2>
+                <p>£{{product.cost_price}}</p>
+            </section>
+            <section class="product-item">
+                <h2>Retail Price:</h2>
+                <p>£{{product.sale_price}}</p>
+            </section>
+            <section class="product-item">
+                <h2>Current Stock Level:</h2>
+                {{product.in_stock}}
+            </section>
+        </div>
+        
+    </article>
+{% endblock content %}
