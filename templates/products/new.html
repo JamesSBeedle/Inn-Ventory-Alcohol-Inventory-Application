@@ -36,8 +36,12 @@
         </section>
         <section>
             <label for="supplier">Supplier:</label>
-            <input type="text" id="supplier" name="supplier">
-        </section>
+            <select id="supplier" name="supplier_id">
+                {% for supplier in all_suppliers  %}
+                <option value="{{supplier.id}}">{{ supplier.name }}</option>
+                {% endfor %}
+            </select>
+        </section> 
 
         <button type="submit">Add Product</button>
 
