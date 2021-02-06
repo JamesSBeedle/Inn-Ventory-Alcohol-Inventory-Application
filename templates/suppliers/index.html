@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<header>
+    <nav>
+        <ul>
+            <li> <a href="/"> <button>Home</button> </a></li>
+            <li><a href="/products"><button>Inventory</button></a></li>
+        </ul>
+    </nav>
+    <h1>Suppliers List</h1>
+</header>
+
+{% if supplier in all_suppliers %}
+    <article id="supplier-display">
+        <div id="supplier-info">
+            <section class="supplier-item">
+                <h2>Name of Supplier</h2>
+                <h3>{{supplier.name}}</h3>
+            </section>
+            <section class="supplier-item">
+                <h2>Products:</h2>
+                <h3>{{supplier.product}}</h3>
+            </section>
+        </div>
+    </article>
+    
+{% endif %}
+    
+{% endblock content %}
+
