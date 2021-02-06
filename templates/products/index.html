@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+{% for product in inventory %}
+    <article>
+        <div>
+            <section>
+                <h2>Name of Product:</h2>
+                {{product.name}}
+            </section>
+            <section>
+                <h2>Decription:</h2>
+                {{product.description}}
+            </section>
+            <section>
+                <h2>Supplier Name:</h2>
+                {{product.supplier.name}}
+            </section>
+        </div>
+        <div>
+            <section>
+                <h2>Wholesale Price:</h2>
+                <p>£{{product.cost_price}}</p>
+            </section>
+            <section>
+                <h2>Retail Price:</h2>
+                <p>£{{product.sale_price}}</p>
+            </section>
+            <section>
+                <h2>Current Stock Level:</h2>
+                {{product.in_stock}}
+            </section>
+        </div>
+    </article>
+    
+{% endfor %}
+    
+{% endblock content %}
+
+
