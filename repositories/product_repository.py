@@ -11,3 +11,27 @@ def save(product):
     id = results[0]['id']
     product.id = id
     return product
+
+def select_all():
+    products = []
+
+    sql = "SELECT * FROM products"
+    results = run_sql(sql)
+
+    for row in results:
+        supplier = supplier_repository.select(row["supplier_id"])
+        product = Product(row["name"], row["category"], row["in_stock"], row["cost_price"], row["sale_price"], row["description"], supplier, row["id"])
+        products.append(product)
+    return products
+
+def select(id):
+    product = None
+    sql = "SELECT * FROM products WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result is not None:
+        supplier = supplier_repository.select(result["supplier_id"])
+        product = Product(result["name"], result["category"], result["in_stock"], result["cost_price"], result["sale_price"], result["description"], supplier, result["id"])
+    return product
+

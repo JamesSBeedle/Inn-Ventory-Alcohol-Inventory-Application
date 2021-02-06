@@ -12,3 +12,24 @@ def save(supplier):
     id = results[0]['id']
     supplier.id = id
     return supplier
+
+def select_all():
+    suppliers = []
+
+    sql = "SELECT * FROM suppliers"
+    results = run_sql(sql)
+
+    for row in results:
+        supplier = Supplier(row["name"], row["address"], row["phone_number"], row["product"], row["id"])
+        suppliers.append(supplier)
+    return suppliers
+
+def select(id):
+    supplier = None
+    sql = "SELECT * FROM suppliers WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result is not None:
+        supplier = Supplier(result["name"], result["address"], result["phone_number"], result["product"], result["id"])
+    return supplier
