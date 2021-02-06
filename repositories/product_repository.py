@@ -2,7 +2,7 @@ from db.run_sql import run_sql
 
 from models.product import Product
 from models.supplier import Supplier
-import repositories.product_repository as product_repository
+import repositories.supplier_repository as supplier_repository
 
 def save(product):
     sql = "INSERT INTO products (name, category, in_stock, cost_price, sale_price, description, supplier_id) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING *"
