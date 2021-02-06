@@ -10,8 +10,9 @@
     </nav>
     <h1>Suppliers List</h1>
 </header>
+<hr>
 
-{% if supplier in all_suppliers %}
+{% for supplier in all_suppliers %}
     <article id="supplier-display">
         <div id="supplier-info">
             <section class="supplier-item">
@@ -24,8 +25,9 @@
             </section>
         </div>
     </article>
+    <hr>
     
-{% endif %}
+{% endfor %}
     
 {% endblock content %}
 
