@@ -15,3 +15,8 @@ def products():
 def show_product(id):
     product = product_repository.select(id)
     return render_template("/products/show.html", product = product)
+
+@products_blueprint.route("/products", methods=["POST"])
+def create_product():
+
+    return redirect("/products")
