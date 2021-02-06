@@ -1,27 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <!-- <article>
-
-        <p>{{product.name}}</p>
-        <p>{{product.supplier.name}}</p>
-        <p>{{product.description}}</p>
-        <br>
-        <br>
-        <br>
-        <p>£{{product.cost_price}}</p>
-        <p>£{{product.sale_price}}</p>
-        <br>
-        <br>
-        <p>{{product.in_stock}}</p>
-
-    </article>
-     -->
-     <article id="product-single">
+<section>
+    <nav>
+        <ul>
+            <li> <a href="/"><button>Home</button></a></li>
+            <li> <a href="/products"> <button>Inventory</button> </a></li>
+            <li><a href="/suppliers"><button>Suppliers</button></a></li>
+        </ul>
+    </nav>
+   
+</section>
+    <article id="product-single">
         <div id="product-info">
             <section class="product-item">
                 <h2>Name of Product:</h2>
                 {{product.name}}
+            </section>
+            <section class="product-item">
+                <h2>Category:</h2>
+                {{product.category}}
             </section>
             <section class="product-item">
                 <h2>Decription:</h2>

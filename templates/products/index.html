@@ -1,42 +1,39 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<header>
+    <nav>
+        <ul>
+            <li> <a href="/"><button>Home</button></a></li>
+            <li><a href="/suppliers"><button>Suppliers</button></a></li>
+        </ul>
+    </nav>
+    <h1>Full Inventory</h1>
+</header>
 
 {% for product in inventory %}
     <article id="product-display">
         <div id="product-info">
             <section class="product-item">
                 <h2>Name of Product:</h2>
-                {{product.name}}
+                <h3>{{product.name}}</h3>
             </section>
             <section class="product-item">
-                <h2>Decription:</h2>
-                {{product.description}}
-            </section>
-            <section class="product-item">
-                <h2>Supplier Name:</h2>
-                {{product.supplier.name}}
-            </section>
-        </div>
-        <div id="product-maths">
-            <section class="product-item">
-                <h2>Wholesale Price:</h2>
-                <p>£{{product.cost_price}}</p>
-            </section>
-            <section class="product-item">
-                <h2>Retail Price:</h2>
-                <p>£{{product.sale_price}}</p>
+                <h2>Category:</h2>
+                <h3>{{product.category}}</h3>
             </section>
             <section class="product-item">
                 <h2>Current Stock Level:</h2>
-                {{product.in_stock}}
+                <h3>{{product.in_stock}}</h3>
             </section>
         </div>
         <a href="/products/{{product.id}}"><button>View Product</button></a>
     </article>
+    <hr>
     
 {% endfor %}
     
 {% endblock content %}
+
 
 
