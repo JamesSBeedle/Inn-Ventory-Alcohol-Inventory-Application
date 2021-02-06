@@ -29,5 +29,10 @@ def create_product():
     product_repository.save(product)
     return redirect("/products")
 
+@products_blueprint.route("products/new", methods=["GET"])
+def new_product():
+    products = product_repository.select_all()
+    return render_template("products/new.html", all_products = products)
 
-    return redirect("/products")
+
+   
