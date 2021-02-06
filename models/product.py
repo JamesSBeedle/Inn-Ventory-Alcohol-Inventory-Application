@@ -7,4 +7,5 @@ class Product:
         self.cost_price = cost_price
         self.sale_price = sale_price
         self.description = description
+        self.supplier = supplier
         self.id = id
