@@ -7,7 +7,40 @@
             <li> <a href="/suppliers"> <button>Suppliers</button> </a></li>
         </ul>
         <h1>Add a New Supplier to Suppliers Directory</h1>
+        
     </nav>
-    </header>
+</header>
+
+<article class="form-container">
+    <form action="/suppliers" method="post">
+        <section></section>
+            <label for="name">Supplier Name:</label>
+            <input type="text" id="name" name="name">
+        </section>
+
+        <section>
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="5" cols="30"></textarea>
+        </section>
+
+        <section>
+            <label for="phone_number">Telephone Number:</label>
+            <input type="text" id="phone_number" name="phone_number">
+        </section>
+
+        <section>
+            <label for="product">Products:</label>
+            <input type="text" id="product" name="product">
+        </section>
+
+        <button type="submit">Add Supplier</button>
+        
+    
+    
+    </form>
+
+</article>
+
+
     
 {% endblock content %}
