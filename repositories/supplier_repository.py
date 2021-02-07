@@ -33,3 +33,9 @@ def select(id):
     if result is not None:
         supplier = Supplier(result["name"], result["address"], result["phone_number"], result["product"], result["id"])
     return supplier
+
+def update(supplier):
+    sql = "UPDATE suppliers SET (name, address, phone_number, product) = (%s, %s, %s, %s) Where id = %s"
+    values = [supplier.name, supplier.address, supplier.phone_number, supplier.product, supplier.id]
+    run_sql(sql, values)
+
