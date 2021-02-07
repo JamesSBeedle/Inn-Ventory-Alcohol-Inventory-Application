@@ -9,12 +9,7 @@
 
         <section>
             <label for="category">Select a Department:</label>
-            <select name="category" id="category" value="{{product.category}}">
-                <option value="category">Draught</option>
-                <option value="category">Wine</option>
-                <option value="category">Spirits</option>
-                <option value="category">Bottles</option>
-            </select>
+            <input type="text" id="category" name="category" value="{{product.category}}">           
         </section>
         <section>
             <label for="in_stock">Number in Stock:</label>
@@ -38,7 +33,12 @@
             <label for="supplier">Supplier:</label>
             <select id="supplier" name="supplier_id">
                 {% for supplier in all_suppliers  %}
-                <option value="{{supplier.id}}">{{ supplier.name }}</option>
+                <option value="{{supplier.id}}"
+                 {% if product.supplier.id == supplier.id %}
+                 selected="selected"                    
+                 {% endif %}>
+                 {{ supplier.name }} 
+                </option>
                 {% endfor %}
             </select>
         </section> 
