@@ -26,7 +26,15 @@
             </section>
             <section class="product-item">
                 <h2>Current Stock Level:</h2>
-                <h3>{{product.in_stock}}</h3>
+               
+                    {% if product.in_stock >= 20 %}
+                    <h3>{{product.in_stock}}</h3>
+                    {% else %}
+                    <h3 style="color:red">{{product.in_stock}}</h3>
+                    {% endif %}
+                    
+              
+                
             </section>
         </div>
         <a href="/products/{{product.id}}"><button>View Product</button></a>
