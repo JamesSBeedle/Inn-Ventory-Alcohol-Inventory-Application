@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<header>
+    <nav>
+        <ul>
+            <li> <a href="/"><button>Home</button></a></li>
+            <li> <a href="/suppliers"> <button>Suppliers</button> </a></li>
+        </ul>
+        <h1>Edit a Supplier in Suppliers Directory</h1>
+        
+    </nav>
+</header>
+<article class="form-container">
+    <form action="/suppliers/{{suppliers.id}}" method="post">
+        <section></section>
+            <label for="name">Supplier Name:</label>
+            <input type="text" id="name" name="name" value="{{supplier.name}}">
+        </section>
+
+        <section>
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="5" cols="30" >{{supplier.address}}</textarea>
+        </section>
+
+        <section>
+            <label for="phone_number">Telephone Number:</label>
+            <input type="text" id="phone_number" name="phone_number" value="{{supplier.phone_number}}">
+        </section>
+
+        <section>
+            <label for="product">Products:</label>
+            <input type="text" id="product" name="product" value="{{supplier.product}}">
+        </section>
+
+        <button type="submit">Update Supplier</button>
+        
+    
+    
+    </form>
+
+</article>
+    
+{% endblock content %}
