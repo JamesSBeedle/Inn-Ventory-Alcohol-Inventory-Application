@@ -21,3 +21,12 @@ def show_supplier(id):
 def new_supplier():
     return render_template("suppliers/new.html")
 
+@suppliers_blueprint.route("/suppliers", methods=["POST"])
+def create_supplier():
+    name = request.form['name']
+    address = request.form['address']
+    phone_number = request.form['phone_number']
+    product = request.form['product']
+    supplier = Supplier(name, address, phone_number, product)
+    supplier_repository.save(supplier)
+    return redirect('/suppliers')
