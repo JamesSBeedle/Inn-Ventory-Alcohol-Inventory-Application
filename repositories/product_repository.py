@@ -35,3 +35,10 @@ def select(id):
         product = Product(result["name"], result["category"], result["in_stock"], result["cost_price"], result["sale_price"], result["description"], supplier, result["id"])
     return product
 
+def update(product):
+    sql = "UPDATE products SET (name, category, in_stock, cost_price, sale_price, description, supplier_id) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [product.name, product.category, product.in_stock, product.cost_price, product.sale_price, product.description, product.supplier.id, product.id]
+    run_sql(sql, values)
+   
+    
+
