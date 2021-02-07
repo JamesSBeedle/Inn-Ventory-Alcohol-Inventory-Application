@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
+<header>
+<nav>
+    <ul>
+        <li> <a href="/"><button>Home</button></a></li>
+        <li> <a href="/products"> <button>Inventory</button> </a></li>
+    </ul>
+    <h1>Add a New Product to Inventory</h1>
+</nav>
+</header>
 <article class="form-container">
     <form action="/products",  method="POST">
         <section>
