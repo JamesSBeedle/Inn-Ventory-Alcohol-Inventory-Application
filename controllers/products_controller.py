@@ -40,7 +40,7 @@ def edit_product(id):
     suppliers = supplier_repository.select_all()
     return render_template("products/edit.html", product = product, all_suppliers = suppliers)
 
-@products_blueprint.route("/books/<id>", methods=["POST"])
+@products_blueprint.route("/products/<id>", methods=["POST"])
 def update_product(id):
     name = request.form["name"]
     category = request.form["category"]
@@ -51,6 +51,7 @@ def update_product(id):
     supplier = supplier_repository.select(request.form['supplier_id'])
     product = Product(name, category, in_stock, cost_price, sale_price, description, supplier, id)
     product_repository.update(product)
+    return redirect("/products")
     
 
 

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <article class="form-container">
-    <form action="/products/{{product.id}}",  method="POST">
+    <form action="/products/{{product.id}}" method="post">
         <section>
             <label for="name">Name of Product:</label>
             <input type="text" id="name" name="name" value="{{product.name}}">
