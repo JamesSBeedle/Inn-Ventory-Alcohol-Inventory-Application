@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<article class="form-container">
+    <form action="/products/{{product.id}}",  method="POST">
+        <section>
+            <label for="name">Name of Product:</label>
+            <input type="text" id="name" name="name" value="{{product.name}}">
+        </section>
+
+        <section>
+            <label for="category">Select a Department:</label>
+            <select name="category" id="category" value="{{product.category}}">
+                <option value="category">Draught</option>
+                <option value="category">Wine</option>
+                <option value="category">Spirits</option>
+                <option value="category">Bottles</option>
+            </select>
+        </section>
+        <section>
+            <label for="in_stock">Number in Stock:</label>
+            <input type="number" id="in_stock" name="in_stock" value="{{product.in_stock}}">
+        </section>
+        <section>
+            <label for="cost_price">Cost Price:</label>
+            <input type="number" id="cost_price" name="cost_price" value="{{product.cost_price}}">
+        </section>
+        <section>
+            <label for="sale_price">Retail Price:</label>
+            <input type="number" id="sale_price" name="sale_price" value="{{product.sale_price}}">
+        </section>
+        <section>
+            <label for="description">Brief Description of the Product:</label>
+            <textarea id="description" name="description" rows="4" columns="30" value="{{product.description}}">
+            </textarea>
+            
+        </section>
+        <section>
+            <label for="supplier">Supplier:</label>
+            <select id="supplier" name="supplier_id">
+                {% for supplier in all_suppliers  %}
+                <option value="{{supplier.id}}">{{ supplier.name }}</option>
+                {% endfor %}
+            </select>
+        </section> 
+
+        <button type="submit">Add Product</button>
+
+    
+    </form>
+</article>
+    
+{% endblock content %}
