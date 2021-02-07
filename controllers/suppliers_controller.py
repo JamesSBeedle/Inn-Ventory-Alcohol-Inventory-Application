@@ -16,3 +16,8 @@ def suppliers():
 def show_supplier(id):
     supplier = supplier_repository.select(id)
     return render_template("/suppliers/show.html", supplier = supplier)
+
+@suppliers_blueprint.route("/suppliers/new", methods=["GET"])
+def new_supplier():
+    return render_template("suppliers/new.html")
+
