@@ -89,8 +89,8 @@ body > footer{
 
 
 .page-nav > ul{
-    display:flex;
-    flex-direction:row;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     list-style:none;
 }
 
@@ -138,3 +138,34 @@ body > footer{
 
 }
 
+.edit-delete{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#product-single{
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    column-gap:5px;
+}
+
+#product-info{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap:5px;
+}
+
+.product-item{
+    text-align:center;
+
+}
+
+#product-maths{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap:5px;
+}
+
+.product-item > p{
+    font-size:30px;
+}

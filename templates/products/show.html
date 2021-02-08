@@ -26,26 +26,31 @@
            
             <section class="product-item">
                 <h2>Category:</h2>
-                {{product.category}}
+                <p>{{product.category}}</p>
             </section>
+            
             <section class="product-item">
                 <h2>Decription:</h2>
-                {{product.description}}
+                <p>{{product.description}}</p>
             </section>
+            
             <section class="product-item">
                 <h2>Supplier Name:</h2>
-                {{product.supplier.name}}
+                <p>{{product.supplier.name}}</p>
             </section>
         </div>
+    
         <div id="product-maths">
             <section class="product-item">
                 <h2>Wholesale Price:</h2>
                 <p>£{{product.cost_price}}</p>
             </section>
+        
             <section class="product-item">
                 <h2>Retail Price:</h2>
                 <p>£{{product.sale_price}}</p>
             </section>
+            
             <section class="product-item">
                 <h2>Current Stock Level:</h2>
                 {% if product.in_stock >= 20 %}
@@ -54,8 +59,12 @@
                 <h3 style="color:red">{{product.in_stock}}</h3>
                 {% endif %}
             </section>
+            
         </div>
-        <hr>
+        
+    </article>
+    <hr>
+    <article class="edit-delete">
         <section>
         <a href="/products/{{product.id}}/edit"><button class="add-new-button">Edit Product</button></a>
         </section>
