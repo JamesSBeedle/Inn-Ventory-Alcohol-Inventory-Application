@@ -9,8 +9,9 @@ class Product:
         self.description = description
         self.supplier = supplier
         self.id = id
+        
 
-    def set_markup(self, cost_price, markup):
-        return cost_price
+    # def set_markup(self, cost_price, markup):
+    #     return cost_price
 
 
