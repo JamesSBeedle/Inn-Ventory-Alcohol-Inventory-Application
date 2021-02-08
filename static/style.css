@@ -19,7 +19,7 @@ body > footer{
     grid-template-rows:200px, 150px,250px;
 }
 
-#home-page > h1{
+#home-page > section > h1{
     height:150px;
     width:99%;
     font-size:70px;
@@ -78,7 +78,7 @@ body > footer{
 .page-title{
     height:100px;
     width:100%;
-    font-size:30px;
+    font-size:50px;
     text-align: center;
     color:honeydew;
     padding:0;
