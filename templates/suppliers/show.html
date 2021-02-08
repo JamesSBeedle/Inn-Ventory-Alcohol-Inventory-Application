@@ -36,9 +36,15 @@
         </section>
     </div>
     <hr>
+    <section>
+        <a href="/suppliers/{{supplier.id}}/edit"><button>Edit Supplier</button></a>
+    </section>
 
-    <a href="/suppliers/{{supplier.id}}/edit"><button>Edit Supplier</button></a>
-
+    <section>
+        <form action="/suppliers/{{supplier.id}}/delete" method="POST">
+            <input type="sumbit" value="Remove Supplier from Directory">
+        </form>
+    </section>
 </article>
     
 {% endblock content %}

@@ -54,12 +54,16 @@
         <section>
         <a href="/products/{{product.id}}/edit"><button>Edit Product</button></a>
         </section>
-
+                   
         <section>
-            <form action="products/{{product.id}}/delete" method="POST">
+            <form action="/products/{{product.id}}/delete" method="POST">
                 <input type="submit" value="Remove Product From Inventory">
             </form>
         </section>
+
+        
+
             
-        </article>
+    </article>
+    
 {% endblock content %}
