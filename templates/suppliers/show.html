@@ -39,12 +39,12 @@
     </div>
     <hr>
     <section>
-        <a href="/suppliers/{{supplier.id}}/edit"><button>Edit Supplier</button></a>
+        <a href="/suppliers/{{supplier.id}}/edit"><button class="add-new-button">Edit Supplier</button></a>
     </section>
 
     <section>
         <form action="/suppliers/{{supplier.id}}/delete" method="POST">
-            <input type="submit" value="Remove Supplier">            
+            <input type="submit" value="Remove Supplier" class="delete-button">            
         </form>
     </section>
 </article>

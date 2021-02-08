@@ -8,17 +8,17 @@
                 <li> <a href="/"> <button class="nav-button index-button">Home</button> </a></li>
             </div>
             <div>
-                <li><a href="/products"><button class="nav-button button-supplier">Inventory</button></a></li>
+                <li><a href="/products"><button class="nav-button button-inv">Inventory</button></a></li>
             </div>
         </ul>
     </nav>
 
-    <section>
+    <section class="page-title">
         <h1>Suppliers List</h1>
     </section>
 
     <section>
-        <a href="/suppliers/new"><button>Add New Supplier</button></a>
+        <a href="/suppliers/new"><button class="add-new-button">Add New Supplier</button></a>
     </section>
 </header>
 <hr>
@@ -35,7 +35,7 @@
                 <h3>{{supplier.product}}</h3>
             </section>
         </div>
-        <a href="/suppliers/{{supplier.id}}"><button>View Supplier Info</button></a>
+        <a href="/suppliers/{{supplier.id}}"><button class="view-button button-supplier">View Supplier Info</button></a>
     </article>
     <hr>
     
