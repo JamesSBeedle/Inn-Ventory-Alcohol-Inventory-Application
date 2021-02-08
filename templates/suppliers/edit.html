@@ -2,14 +2,21 @@
 {% block content %}
 
 <header>
-    <nav>
+    <nav class="page-nav">
         <ul>
-            <li> <a href="/"><button>Home</button></a></li>
-            <li> <a href="/suppliers"> <button>Suppliers</button> </a></li>
+            <div>
+                <li> <a href="/"><button class="nav-button index-button">Home</button></a></li>
+            </div>
+            <div>
+                <li> <a href="/suppliers"> <button class="nav-button button-supplier">Suppliers</button> </a></li>
+            </div>
         </ul>
-        <h1>Edit a Supplier in Suppliers Directory</h1>
-        
     </nav>
+    <section class="page-title">
+        <h1>Edit a Supplier in Suppliers Directory</h1>
+    </section>
+        
+    
 </header>
 <article class="form-container">
     <form action="/suppliers/{{supplier.id}}" method="post">
@@ -24,8 +31,8 @@
         </section>
 
         <section>
-            <label for="phone_number">Telephone Number:</label>
-            <input type="text" id="phone_number" name="phone_number" value="{{supplier.phone_number}}">
+            <label for="phone_number">enter mobile number:</label>
+            <input type="tel" id="phone_number" name="phone_number" placeholder="07123-123-123" pattern="[0-9]{5}-[0-9]{3}-[0-9]{3}" required>
         </section>
 
         <section>

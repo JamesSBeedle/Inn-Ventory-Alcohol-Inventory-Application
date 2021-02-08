@@ -2,22 +2,24 @@
 {% block content %}
 
 <header>
-    <nav>
+    <nav class="page-nav">
         <ul>
-            <li><a href="/"><button>Home</button></a></li>
-            <li><a href="/products"><button>Inventory</button></a></li>
-            <li><a href="/suppliers"><button>Suppliers</button></a></li>
+            <div>
+                <li><a href="/"><button class="nav-button index-button">Home</button></a></li>
+            </div>
+            <div>
+                <li><a href="/suppliers"><button class="nav-button button-supplier">Suppliers</button></a></li>
+            </div>
         </ul>
     </nav>
+    <section class="page-title">
+        <h1>{{supplier.name}}</h1>
+    </section>
 </header>
 <hr>
 
 <article id="supplier-single">
     <div id="supplier-info">
-        <section class="supplier-item">
-            <h2>Supplier Name:</h2>
-            <h3>{{supplier.name}}</h3>
-        </section>
         <section class="supplier-item">
             <h2>Address:</h2>
             <p>{{supplier.address}}</p>

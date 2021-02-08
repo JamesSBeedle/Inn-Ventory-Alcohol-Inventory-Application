@@ -2,14 +2,24 @@
 {% block content %}
 
 <header>
-    <nav>
+    <nav class="page-nav">
         <ul>
-            <li> <a href="/"> <button>Home</button> </a></li>
-            <li><a href="/products"><button>Inventory</button></a></li>
+            <div>
+                <li> <a href="/"> <button class="nav-button index-button">Home</button> </a></li>
+            </div>
+            <div>
+                <li><a href="/products"><button class="nav-button button-supplier">Inventory</button></a></li>
+            </div>
         </ul>
     </nav>
-    <h1>Suppliers List</h1>
-    <a href="/suppliers/new"><button>Add New Supplier</button></a>
+
+    <section>
+        <h1>Suppliers List</h1>
+    </section>
+
+    <section>
+        <a href="/suppliers/new"><button>Add New Supplier</button></a>
+    </section>
 </header>
 <hr>
 

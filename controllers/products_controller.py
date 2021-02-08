@@ -9,17 +9,17 @@ products_blueprint = Blueprint("products", __name__)
 @products_blueprint.route("/products")
 def products():
     products = product_repository.select_all()
-    return render_template("products/index.html", inventory = products)
+    return render_template("products/index.html", inventory = products, title="Inn-Ventory - Full Inventory")
 
 @products_blueprint.route("/products/<id>", methods=["GET"])
 def show_product(id):
     product = product_repository.select(id)
-    return render_template("/products/show.html", product = product)
+    return render_template("/products/show.html", product = product, title="Inn-Ventory - Product")
 
 @products_blueprint.route("/products/new", methods=["GET"])
 def new_product():
     suppliers = supplier_repository.select_all()
-    return render_template("products/new.html", all_suppliers = suppliers)
+    return render_template("products/new.html", all_suppliers = suppliers, title="Inn-Ventory - Create Product")
 
 @products_blueprint.route("/products", methods=["POST"])
 def create_product():
@@ -39,7 +39,7 @@ def create_product():
 def edit_product(id):
     product = product_repository.select(id)
     suppliers = supplier_repository.select_all()
-    return render_template("products/edit.html", product = product, all_suppliers = suppliers)
+    return render_template("products/edit.html", product = product, all_suppliers = suppliers, title="Inn-Ventory - Edit Product")
 
 @products_blueprint.route("/products/<id>", methods=["POST"])
 def update_product(id):

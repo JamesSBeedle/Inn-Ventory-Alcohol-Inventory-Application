@@ -2,16 +2,21 @@
 {% block content %}
 
     <header>
-        <nav>
+        <nav class="page-nav">
             <ul>
-                <li> <a href="/"><button>Home</button></a></li>
-                <li> <a href="/products"> <button>Inventory</button> </a></li>
-                <li><a href="/suppliers"><button>Suppliers</button></a></li>
+                <div>
+                    <li> <a href="/"><button class="nav-button index-button">Home</button></a></li>
+                </div>
+                <div>
+                    <li> <a href="/products"> <button class="nav-button button-inv">Inventory</button> </a></li>
+                </div>
             </ul>
 
         </nav>
         
-        <h1>{{product.name}}</h1>     
+        <section class="page-title">
+            <h1>{{product.name}}</h1>   
+        </section>  
         
     </header>
     <hr>

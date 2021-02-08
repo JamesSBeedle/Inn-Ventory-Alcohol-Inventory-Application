@@ -74,3 +74,23 @@ body > footer{
     margin:5px 5px 10px 5px;
     text-align:center;
 }
+
+.page-title{
+    height:100px;
+    width:100%;
+    font-size:30px;
+    text-align: center;
+    color:honeydew;
+    padding:0;
+    margin:0px;
+    background-color:#800020;
+}
+
+
+
+.page-nav > ul{
+    display:flex;
+    flex-direction:row;
+    list-style:none;
+}
+
