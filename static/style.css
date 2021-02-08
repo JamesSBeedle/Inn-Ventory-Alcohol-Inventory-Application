@@ -236,3 +236,110 @@ body > footer{
 .product-item-2 > h2{
     font-size: 30px;
 }
+
+.add-update-button-container{
+    display:flex;
+    justify-content:center;
+}
+
+.add-update{
+    height:100px;
+    width:300px;
+    background-color:limegreen;
+    border-radius: 5px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 30px;
+    margin:10px;
+}
+
+.form-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr;
+    column-gap: 5px;
+    justify-items:center;
+    align-items:center;
+}
+
+.form-container > section{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items:center;
+    align-items:center;
+}
+
+.form-container > section > label{
+    font-size: 50px;
+}
+
+.form-container > section > input{
+    height:80px;
+    width:400px;
+    font-size: 30px;
+    background-color: white;
+    color:black;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin:10px;
+
+}
+
+.form-container > section > select {
+    height:80px;
+    width:400px;
+    font-size: 30px;
+    background-color: white;
+    color:black;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin:10px;
+
+}
+
+.form-container > section > textarea{
+    height:200px;
+    width:400px;
+    font-size: 30px;
+    background-color: white;
+    color:black;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin:10px;
+}
+
+.form-container-2{
+    display:grid;
+    grid-template-rows:1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr;
+    justify-items:center;
+    align-items:center;
+}
+
+.form-container-2 > section > label{
+    font-size: 30px;
+}
+
+.form-container-2 > section > input{
+    height:80px;
+    width:400px;
+    font-size: 30px;
+    background-color: white;
+    color:black;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin:10px;
+
+}
+
+.form-container-2 > section > textarea{
+    height:200px;
+    width:400px;
+    font-size: 30px;
+    background-color: white;
+    color:black;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin:10px;
+}
+
+    

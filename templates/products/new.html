@@ -15,8 +15,8 @@
     <h1>Add a New Product to Inventory</h1>
 </section>
 </header>
-<article class="form-container">
-    <form action="/products",  method="POST">
+<article >
+    <form action="/products",  method="POST" class="form-container">
         <section>
             <label for="name">Name of Product:</label>
             <input type="text" id="name" name="name">
@@ -58,10 +58,14 @@
             </select>
         </section> 
 
-        <button type="submit">Add Product</button>
+        <section class="add-update-button-container">
+            <button type="submit" class="add-update">Add Product</button>
+        </section>
+
+    </form>
 
     
-    </form>
+
 </article>
     
 {% endblock content %}

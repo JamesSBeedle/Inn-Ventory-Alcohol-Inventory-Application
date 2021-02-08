@@ -16,8 +16,8 @@
         <h1>Edit Product</h1>
     </section>
 </header>
-<article class="form-container">
-    <form action="/products/{{product.id}}" method="post">
+<article>
+    <form action="/products/{{product.id}}" method="post" class="form-container">
         <section>
             <label for="name">Name of Product:</label>
             <input type="text" id="name" name="name" value="{{product.name}}">
@@ -57,12 +57,15 @@
                 </option>
                 {% endfor %}
             </select>
-        </section> 
+        </section>
 
-        <button type="submit">Update Product</button>
-
+        <section class="add-update-button-container">
+            <button type="submit" class="add-update">Update Product</button>
+        </section>
     
     </form>
+    
+   
     
 </article>
     
