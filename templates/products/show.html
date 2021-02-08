@@ -36,27 +36,27 @@
             
             <section class="product-item">
                 <h2>Supplier Name:</h2>
-                <p>{{product.supplier.name}}</p>
+                <p>{{product.supplier.name}}</p
             </section>
         </div>
     
         <div id="product-maths">
-            <section class="product-item">
+            <section class="product-item-2">
                 <h2>Wholesale Price:</h2>
                 <p>£{{product.cost_price}}</p>
             </section>
         
-            <section class="product-item">
+            <section class="product-item-2">
                 <h2>Retail Price:</h2>
                 <p>£{{product.sale_price}}</p>
             </section>
             
-            <section class="product-item">
+            <section class="product-item-2">
                 <h2>Current Stock Level:</h2>
                 {% if product.in_stock >= 20 %}
                 <h3>{{product.in_stock}}</h3>
                 {% else %}
-                <h3 style="color:red">{{product.in_stock}}</h3>
+                <p style="color:red">{{product.in_stock}}</p>
                 {% endif %}
             </section>
             

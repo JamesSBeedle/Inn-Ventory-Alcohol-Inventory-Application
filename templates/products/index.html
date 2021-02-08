@@ -17,7 +17,7 @@
         <h1>Full Inventory</h1>
     </section>
 
-    <section>
+    <section class="button-container">
         <a href="/products/new"><button class="add-new-button">Add New Product</button></a>
     </section>
     
@@ -48,7 +48,9 @@
                 
             </section>
         </div>
-        <a href="/products/{{product.id}}"><button class="view-button button-inv">View Product</button></a>
+        <section class="button-container">
+            <a href="/products/{{product.id}}"><button class="view-button button-inv">View Product</button></a>
+        </section>
     </article>
     <hr>
     

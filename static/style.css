@@ -90,8 +90,9 @@ body > footer{
 
 .page-nav > ul{
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     list-style:none;
+    justify-items: center;
 }
 
 .nav-button{
@@ -108,6 +109,11 @@ body > footer{
     color:honeydew;
 }
 
+.button-container{
+    display:flex;
+    justify-content:center;
+}
+
 .add-new-button{
     background-color:lightgreen;
     border-radius:5px;
@@ -116,14 +122,23 @@ body > footer{
     font-family:'Times New Roman', Times, serif;
     font-size: 20px;
     margin:10px;
+    
 }
 
-.view-button{
-    height:35px;
-    width:70px;
+.view-button-2{
+    height:100px;
+    width:250px;
     border-radius:3px;
     font-family:'Times New Roman', Times, serif;
-    font-size:10px;
+    font-size:30px;
+    margin:5px;
+}
+.view-button{
+    height:50px;
+    width:150px;
+    border-radius:3px;
+    font-family:'Times New Roman', Times, serif;
+    font-size:20px;
     margin:5px;
 }
 
@@ -157,6 +172,14 @@ body > footer{
 
 .product-item{
     text-align:center;
+    border-right:2px dotted darkgray;
+
+}
+
+.product-item-2{
+    text-align:center;
+    border-right:2px dotted darkgray;
+    border-top:2px dotted darkgray;
 
 }
 
@@ -166,6 +189,34 @@ body > footer{
     column-gap:5px;
 }
 
+
 .product-item > p{
     font-size:30px;
+}
+
+.product-item-2 > p{
+    font-size:30px;
+}
+
+#supplier-info{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap:5px;
+}
+
+.supplier-item{
+    border-right:2px dotted darkgray;
+    text-align: center;
+}
+
+.supplier-item > p{
+    font-size:30px;
+}
+
+.supplier-item > h3{
+    font-size:30px;
+}
+
+.supplier-item > h2{
+    text-decoration: underline;
 }

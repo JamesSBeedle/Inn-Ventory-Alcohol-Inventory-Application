@@ -27,16 +27,20 @@
     <article id="supplier-display">
         <div id="supplier-info">
             <section class="supplier-item">
-                <h2>Name of Supplier</h2>
+                <h2>Name of Supplier:</h2>
                 <h3>{{supplier.name}}</h3>
             </section>
             <section class="supplier-item">
                 <h2>Products:</h2>
                 <h3>{{supplier.product}}</h3>
             </section>
+            <section class=supplier-item>
+                <a href="/suppliers/{{supplier.id}}"><button class="view-button-2 button-supplier">View Supplier Info</button></a>
+            </section>
         </div>
-        <a href="/suppliers/{{supplier.id}}"><button class="view-button button-supplier">View Supplier Info</button></a>
+        
     </article>
+    <hr>
     <hr>
     
 {% endfor %}
