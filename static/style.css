@@ -96,11 +96,11 @@ body > footer{
 }
 
 .nav-button{
-    height:50px;
-    width:100px;
+    height:150px;
+    width:300px;
     border-radius:5px;
     font-family: 'Times New Roman', Times, serif;
-    font-size:20px;
+    font-size:40px;
     margin:0px 10px;
 }
 
@@ -117,15 +117,15 @@ body > footer{
 .add-new-button{
     background-color:lightgreen;
     border-radius:5px;
-    height: 50px;
-    width:155px;
+    height: 100px;
+    width:500px;
     font-family:'Times New Roman', Times, serif;
-    font-size: 20px;
+    font-size: 30px;
     margin:10px;
     
 }
 
-.view-button-2{
+.view-button{
     height:100px;
     width:250px;
     border-radius:3px;
@@ -133,29 +133,23 @@ body > footer{
     font-size:30px;
     margin:5px;
 }
-.view-button{
-    height:50px;
-    width:150px;
-    border-radius:3px;
-    font-family:'Times New Roman', Times, serif;
-    font-size:20px;
-    margin:5px;
-}
+
 
 .delete-button{
     background-color:red;
     border-radius:5px;
-    height: 50px;
-    width:155px;
+    height: 100px;
+    width:500px;
     font-family:'Times New Roman', Times, serif;
-    font-size: 20px;
+    font-size: 30px;
     margin:10px;   
 
 }
 
 .edit-delete{
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
+    justify-items:center;
 }
 
 #product-single{
@@ -165,6 +159,12 @@ body > footer{
 }
 
 #product-info{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap:5px;
+}
+
+#product-info-single{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap:5px;
@@ -180,6 +180,7 @@ body > footer{
     text-align:center;
     border-right:2px dotted darkgray;
     border-top:2px dotted darkgray;
+    
 
 }
 
@@ -219,4 +220,19 @@ body > footer{
 
 .supplier-item > h2{
     text-decoration: underline;
+}
+
+.product-item > h3{
+    font-size: 30px;
+}
+
+.product-item > h2{
+    font-size: 30px;
+}
+.product-item-2 > h3{
+    font-size: 30px;
+}
+
+.product-item-2 > h2{
+    font-size: 30px;
 }

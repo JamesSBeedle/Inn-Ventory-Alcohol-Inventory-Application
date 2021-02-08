@@ -42,16 +42,17 @@
                     <h3>{{product.in_stock}}</h3>
                     {% else %}
                     <h3 style="color:red">{{product.in_stock}}</h3>
-                    {% endif %}
-                    
+                    {% endif %}                  
               
-                
+            </section>
+
+            <section class="button-container">
+                <a href="/products/{{product.id}}"><button class="view-button button-inv">View Product</button></a>
             </section>
         </div>
-        <section class="button-container">
-            <a href="/products/{{product.id}}"><button class="view-button button-inv">View Product</button></a>
-        </section>
+        
     </article>
+    <hr>
     <hr>
     
 {% endfor %}
