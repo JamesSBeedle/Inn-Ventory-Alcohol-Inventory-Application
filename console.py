@@ -8,13 +8,13 @@ import repositories.supplier_repository as supplier_repository
 product_repository.delete_all()
 supplier_repository.delete_all()
 
-supplier1 = Supplier("Timothy Taylors", "Knowle Spring Brewery, Keighley", 669669, "Landlord")
+supplier1 = Supplier("Timothy Taylors", "Knowle Spring Brewery, Keighley", "01535-555-555", "Landlord")
 supplier_repository.save(supplier1)
 
-supplier2 = Supplier("ABV Wholesale", "Dalton Lane, Keighley", 699699, "Budvar")
+supplier2 = Supplier("ABV Wholesale", "Dalton Lane, Keighley", "01535-699-699", "Budvar")
 supplier_repository.save(supplier2)
 
-supplier3 = Supplier("Premier Cru", "Ballpark Road, Shipley", 545667, "Chenin Blanc")
+supplier3 = Supplier("Premier Cru", "Ballpark Road, Shipley", "01274-545-667", "Chenin Blanc")
 supplier_repository.save(supplier3)
 
 supplier_repository.select_all()
