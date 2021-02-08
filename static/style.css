@@ -7,8 +7,11 @@ body{
 body > footer{
     background-color:#800020;
     color:antiquewhite;
+    width:100%;
+    height:auto;
     display:grid;
     grid-template-columns: 1fr 1fr;
+    
 }
 
 #home-page{
@@ -43,6 +46,7 @@ body > footer{
     display:grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
+    padding-bottom: 10px;
 }
 
 .button-home{
