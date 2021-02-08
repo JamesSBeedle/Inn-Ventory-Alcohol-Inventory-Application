@@ -27,8 +27,9 @@ def create_product():
     category = request.form["category"]
     in_stock = request.form["in_stock"]
     cost_price = request.form["cost_price"]
-    sale_price = request.form["sale_price"]
+    sale_price = request.form["sale_price"] #change to be markup values in dropdown
     description = request.form["description"]
+    #set_markup function (cost_price, sale_price) sale_price=set_markup 
     supplier = supplier_repository.select(request.form['supplier_id'])
     product = Product(name, category, in_stock, cost_price, sale_price, description, supplier)
     product_repository.save(product)

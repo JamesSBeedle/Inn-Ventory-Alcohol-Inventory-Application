@@ -29,6 +29,7 @@ def create_supplier():
     product = request.form['product']
     supplier = Supplier(name, address, phone_number, product)
     supplier_repository.save(supplier)
+    print("SYHHKJTLKTLTLY", supplier)
     return redirect('/suppliers')
 
 @suppliers_blueprint.route("/suppliers/<id>/edit", methods=["GET"])
