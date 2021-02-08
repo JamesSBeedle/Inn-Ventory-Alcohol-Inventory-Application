@@ -5,6 +5,9 @@ from models.supplier import Supplier
 import repositories.product_repository as product_repository
 import repositories.supplier_repository as supplier_repository
 
+product_repository.delete_all()
+supplier_repository.delete_all()
+
 supplier1 = Supplier("Timothy Taylors", "Knowle Spring Brewery, Keighley", 669669, "Landlord")
 supplier_repository.save(supplier1)
 
