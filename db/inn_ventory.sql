@@ -16,6 +16,7 @@ CREATE TABLE products (
     category VARCHAR(255),
     in_stock INT,
     cost_price DECIMAL(4,2),
+    mark_up INT,
     sale_price DECIMAL(4,2),
     description TEXT,
     minimum_stock_level INT,

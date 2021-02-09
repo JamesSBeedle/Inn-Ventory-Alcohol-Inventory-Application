@@ -36,8 +36,18 @@
             <input type="number" id="cost_price" name="cost_price" value="{{product.cost_price}}" step="0.01">
         </section>
         <section>
-            <label for="sale_price">Retail Price:</label>
-            <input type="number" id="sale_price" name="sale_price" value="{{product.sale_price}}" step="0.01">
+            <label for="mark_up">Mark Up %:</label>
+            <select id="mark-up" name="mark_up">
+                {% for product in products  %}
+                <option value="{{product.mark_up}}"
+                 {% if product.mark_up == product.mark_up %}
+                 selected="selected"                    
+                 {% endif %}>
+                 {{ product.mark_up }} 
+                </option>
+                {% endfor %}
+
+            </select>
         </section>
         <section>
             <label for="description">Brief Description of the Product:</label>

@@ -14,7 +14,8 @@ def products():
 @products_blueprint.route("/products/<id>", methods=["GET"])
 def show_product(id):
     product = product_repository.select(id)
-    return render_template("/products/show.html", product = product, title="Inn-Ventory - Product")
+    difference = product.sale_price - product.cost_price
+    return render_template("/products/show.html", product = product, title="Inn-Ventory - Product", difference=difference)
 
 @products_blueprint.route("/products/new", methods=["GET"])
 def new_product():
@@ -27,13 +28,16 @@ def create_product():
     category = request.form["category"]
     in_stock = request.form["in_stock"]
     cost_price = request.form["cost_price"]
-    sale_price = request.form["sale_price"] #change to be markup values in dropdown
+    print(cost_price)
+    mark_up = request.form["mark_up"]
+    print(mark_up)
     description = request.form["description"]
-    minimum_stock_level = request.form["minimum_stock_level"]
-    #set_markup function (cost_price, sale_price) sale_price=set_markup 
+    minimum_stock_level = request.form["minimum_stock_level"] 
     supplier = supplier_repository.select(request.form['supplier_id'])
-    product = Product(name, category, in_stock, cost_price, sale_price, description,minimum_stock_level, supplier)
-    product_repository.save(product)
+    # sale_price = ((float(cost_price) / 100) * float(mark_up)) + float(cost_price)
+    sale_price = Product.set_markup(cost_price, mark_up)
+    new_product = Product(name, category, in_stock, cost_price, mark_up, sale_price, description, minimum_stock_level, supplier)
+    product_repository.save(new_product)
     return redirect("/products")
 
 @products_blueprint.route("/products/<id>/edit", methods=["GET"])
@@ -48,11 +52,12 @@ def update_product(id):
     category = request.form["category"]
     in_stock = request.form["in_stock"]
     cost_price = request.form["cost_price"]
-    sale_price = request.form["sale_price"]
+    mark_up = request.form["mark_up"]
+    sale_price = product_repository.select(sale_price)
     description = request.form["description"]
     minimum_stock_level = request.form["minimum_stock_level"]
     supplier = supplier_repository.select(request.form['supplier_id'])
-    product = Product(name, category, in_stock, cost_price, sale_price, description,minimum_stock_level, supplier, id)
+    product = Product(name, category, in_stock, cost_price, mark_up, sale_price, description,minimum_stock_level, supplier, id)
     product_repository.update(product)
     return redirect("/products")
     

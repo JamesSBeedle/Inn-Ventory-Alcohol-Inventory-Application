@@ -19,13 +19,13 @@ supplier_repository.save(supplier3)
 
 supplier_repository.select_all()
 
-product1 = Product("Landlord", "Draught", 12, 1.23, 3.00, "A Strong Pale Ale", 36, supplier1)
+product1 = Product("Landlord", "Draught", 12, 1.23, 70, 2.09, "A Strong Pale Ale", 36, supplier1)
 product_repository.save(product1)
 
-product2 = Product("Budvar", "Bottles", 24, 2.20, 4.50, "A Czech Pilsner", 24, supplier2)
+product2 = Product("Budvar", "Bottles", 24, 2.20,70, 3.74, "A Czech Pilsner", 24, supplier2)
 product_repository.save(product2)
 
-product3 = Product("Chenin Blanc", "Wine", 12, 9.50, 16.50, "Crisp French White Wine", 12, supplier3)
+product3 = Product("Chenin Blanc", "Wine", 12, 9.50,70,16.15, "Crisp French White Wine", 12, supplier3)
 product_repository.save(product3)
 
 

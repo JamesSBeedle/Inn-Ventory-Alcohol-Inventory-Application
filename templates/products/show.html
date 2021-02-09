@@ -45,10 +45,14 @@
                 <h2>Wholesale Price:</h2>
                 <p>£{{product.cost_price}}</p>
             </section>
+            <section class="product-item-2">
+                <h2>Mark Up:</h2>
+                <p>{{product.mark_up}}%</p>
+            </section>
         
             <section class="product-item-2">
                 <h2>Retail Price:</h2>
-                <p>£{{product.sale_price}}</p>
+                <p>£{{product.sale_price}} <span style="color: green">+{{difference}}</span></p>
             </section>
 
             <section class="product-item-2">
