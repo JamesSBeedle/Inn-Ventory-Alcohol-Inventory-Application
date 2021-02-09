@@ -46,6 +46,10 @@
             
         </section>
         <section>
+            <label for="minimum_stock_level">Minimum Stock Level:</label>
+            <input type="number" id="minimum_stock_level" name="minimum_stock_level" value="{{product.minimum_stock_level}}">
+        </section>
+        <section>
             <label for="supplier">Supplier:</label>
             <select id="supplier" name="supplier_id">
                 {% for supplier in all_suppliers  %}

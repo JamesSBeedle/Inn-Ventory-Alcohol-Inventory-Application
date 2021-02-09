@@ -18,5 +18,6 @@ CREATE TABLE products (
     cost_price DECIMAL(4,2),
     sale_price DECIMAL(4,2),
     description TEXT,
+    minimum_stock_level INT,
     supplier_id INT REFERENCES suppliers(id) ON DELETE CASCADE
 );
