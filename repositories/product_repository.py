@@ -5,7 +5,7 @@ from models.supplier import Supplier
 import repositories.supplier_repository as supplier_repository
 
 def save(product):
-    sql = "INSERT INTO products (name, category, in_stock, cost_price, sale_price, description, minimum_stock_level, supplier_id) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING *"
+    sql = "INSERT INTO products (name, category, in_stock, cost_price, sale_price, description, minimum_stock_level, supplier_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s) RETURNING *"
     values = [product.name, product.category, product.in_stock, product.cost_price, product.sale_price, product.description, product.minimum_stock_level, product.supplier.id]
     results = run_sql(sql, values)
     id = results[0]['id']
@@ -36,7 +36,7 @@ def select(id):
     return product
 
 def update(product):
-    sql = "UPDATE products SET (name, category, in_stock, cost_price, sale_price, description,minimum_stock_level, supplier_id) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
+    sql = "UPDATE products SET (name, category, in_stock, cost_price, sale_price, description,minimum_stock_level, supplier_id) = (%s, %s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
     values = [product.name, product.category, product.in_stock, product.cost_price, product.sale_price, product.description, product.minimum_stock_level, product.supplier.id, product.id]
     run_sql(sql, values)
    
