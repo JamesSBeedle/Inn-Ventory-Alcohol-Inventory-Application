@@ -56,12 +56,16 @@
                 <p>{{product.minimum_stock_level}}</p>
             </section>
             
-            <section class="product-item-2">
+            <section class="product-item-2 current-stock-level">
                 <h2>Current Stock Level:</h2>
-                {% if product.in_stock >= 20 %}
-                <h3>{{product.in_stock}}</h3>
+                {% if product.in_stock == 0: %}
+                <p style="color:red">{{product.in_stock}} </p>
+                <p> Out of Stock!</p>
+                {% elif product.in_stock <= product.minimum_stock_level: %}
+                <p style="color:orange">{{product.in_stock}} </p>
+                <p>Low Stock</p>
                 {% else %}
-                <p style="color:red">{{product.in_stock}}</p>
+                <p>{{product.in_stock}}</p>
                 {% endif %}
             </section>
             

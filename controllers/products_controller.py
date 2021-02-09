@@ -29,9 +29,10 @@ def create_product():
     cost_price = request.form["cost_price"]
     sale_price = request.form["sale_price"] #change to be markup values in dropdown
     description = request.form["description"]
+    minimum_stock_level = request.form["minimum_stock_level"]
     #set_markup function (cost_price, sale_price) sale_price=set_markup 
     supplier = supplier_repository.select(request.form['supplier_id'])
-    product = Product(name, category, in_stock, cost_price, sale_price, description, supplier)
+    product = Product(name, category, in_stock, cost_price, sale_price, description,minimum_stock_level, supplier)
     product_repository.save(product)
     return redirect("/products")
 
@@ -49,8 +50,9 @@ def update_product(id):
     cost_price = request.form["cost_price"]
     sale_price = request.form["sale_price"]
     description = request.form["description"]
+    minimum_stock_level = request.form["minimum_stock_level"]
     supplier = supplier_repository.select(request.form['supplier_id'])
-    product = Product(name, category, in_stock, cost_price, sale_price, description, supplier, id)
+    product = Product(name, category, in_stock, cost_price, sale_price, description,minimum_stock_level, supplier, id)
     product_repository.update(product)
     return redirect("/products")
     
