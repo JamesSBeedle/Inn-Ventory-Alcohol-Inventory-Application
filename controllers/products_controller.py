@@ -28,9 +28,7 @@ def create_product():
     category = request.form["category"]
     in_stock = request.form["in_stock"]
     cost_price = request.form["cost_price"]
-    print(cost_price)
     mark_up = request.form["mark_up"]
-    print(mark_up)
     description = request.form["description"]
     minimum_stock_level = request.form["minimum_stock_level"] 
     supplier = supplier_repository.select(request.form['supplier_id'])
