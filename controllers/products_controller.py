@@ -34,7 +34,6 @@ def create_product():
     description = request.form["description"]
     minimum_stock_level = request.form["minimum_stock_level"] 
     supplier = supplier_repository.select(request.form['supplier_id'])
-    # sale_price = ((float(cost_price) / 100) * float(mark_up)) + float(cost_price)
     sale_price = Product.set_markup(cost_price, mark_up)
     new_product = Product(name, category, in_stock, cost_price, mark_up, sale_price, description, minimum_stock_level, supplier)
     product_repository.save(new_product)
@@ -53,10 +52,10 @@ def update_product(id):
     in_stock = request.form["in_stock"]
     cost_price = request.form["cost_price"]
     mark_up = request.form["mark_up"]
-    sale_price = product_repository.select(sale_price)
     description = request.form["description"]
     minimum_stock_level = request.form["minimum_stock_level"]
     supplier = supplier_repository.select(request.form['supplier_id'])
+    sale_price = Product.set_markup(cost_price, mark_up)
     product = Product(name, category, in_stock, cost_price, mark_up, sale_price, description,minimum_stock_level, supplier, id)
     product_repository.update(product)
     return redirect("/products")

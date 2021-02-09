@@ -16,8 +16,4 @@ class Product:
     def set_markup(cls, unit_price, percentage):
         sale_price = ((float(unit_price) / 100) * float(percentage)) + float(unit_price)
         return sale_price 
-# to set the sale price for product you need to add a % markup
 
-# so cost_price * %markup you want = markup amount
-# you then add this to the cost_price to get the sale amount
-#eg (cost_price * mark_up)+ cost_price = sale_price
