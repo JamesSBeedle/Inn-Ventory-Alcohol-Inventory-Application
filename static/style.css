@@ -172,12 +172,6 @@ body > footer{
     row-gap: 5px;
 }
 
-#product-info{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap:5px;
-}
-
 #product-info-single{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -218,12 +212,18 @@ body > footer{
 #supplier-info{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr;
     column-gap:5px;
+    row-gap: 5px;
 }
 
 .supplier-item{
-    border-right:2px dotted darkgray;
+    border:2px dotted darkgray;
     text-align: center;
+}
+.supplier-product{
+    grid-row:2;
+    grid-column:2;
 }
 
 .supplier-item > p{

@@ -25,31 +25,69 @@
 <hr>
 
 {% for product in inventory %}
-    <article id="product-display">
-        <div id="product-info">
-            <section class="product-item">
-                <h2>Name of Product:</h2>
-                <h3>{{product.name}}</h3>
-            </section>
-            <section class="product-item">
-                <h2>Category:</h2>
-                <h3>{{product.category}}</h3>
-            </section>
-            <section class="product-item">
-                <h2>Current Stock Level:</h2>
-               
-                    {% if product.in_stock == 0: %}
-                    <h3 style="color:red">{{product.in_stock}} </h3>
-                    <h3> Out of Stock!</h3>
-                    {% elif product.in_stock <= product.minimum_stock_level: %}
-                    <h3 style="color:orange">{{product.in_stock}} </h3>
-                    <h3>Low Stock</h3>
-                    {% else %}
-                    <h3>{{product.in_stock}}</h3>
-                    {% endif %}
-              
-            </section>
+<article id="product-single">
+    <div id="product-info-single">
 
+        <section class="product-item">
+            <h2>Product Name:</h2>
+            <p>{{product.name}}</p>
+        </section>
+       
+        <section class="product-item">
+            <h2>Category:</h2>
+            <p>{{product.category}}</p>
+        </section>
+        
+        <section class="product-item">
+            <h2>Decription:</h2>
+            <p>{{product.description}}</p>
+        </section>
+        
+        
+    </div>
+
+    <div id="product-maths">
+        <section class="product-item-2">
+            <h2>Supplier Name:</h2>
+            <p>{{product.supplier.name}}</p>
+        </section>
+        <section class="product-item-2">
+            <h2>Wholesale Price:</h2>
+            <p>£{{product.cost_price}}</p>
+        </section>
+        <section class="product-item-2">
+            <h2>Mark Up:</h2>
+            <p>{{product.mark_up}}%</p>
+        </section>
+    
+        <section class="product-item-2">
+            <h2>Retail Price:</h2>
+            <p>£{{product.sale_price}} <span style="color: green">+{{difference}}</span></p>
+        </section>
+
+        <section class="product-item-2">
+            <h2>Minimum Stock Level:</h2>
+            <p>{{product.minimum_stock_level}}</p>
+        </section>
+        
+        <section class="product-item-2 current-stock-level">
+            <h2>Current Stock Level:</h2>
+            {% if product.in_stock == 0: %}
+            <p style="color:red">{{product.in_stock}} </p>
+            <p> Out of Stock!</p>
+            {% elif product.in_stock <= product.minimum_stock_level: %}
+            <p style="color:orange">{{product.in_stock}} </p>
+            <p>Low Stock</p>
+            {% else %}
+            <p>{{product.in_stock}}</p>
+            {% endif %}
+        </section>
+        
+    </div>
+    
+</article>
+    <article>
+        <div>
             <section class="button-container">
                 <a href="/products/{{product.id}}"><button class="view-button button-inv">View Product</button></a>
             </section>

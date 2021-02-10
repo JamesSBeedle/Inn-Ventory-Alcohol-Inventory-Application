@@ -31,15 +31,25 @@
                 <h3>{{supplier.name}}</h3>
             </section>
             <section class="supplier-item">
+                <h2>Address:</h2>
+                
+                <p>{{supplier.address}}</p>
+            </section>
+            <section class="supplier-item">
+                <h2>Telephone Number:</h2>
+                
+                <p>{{supplier.phone_number}}</p>
+            </section>
+            <section class="supplier-item supplier-product">
                 <h2>Products:</h2>
                 <h3>{{supplier.product}}</h3>
-            </section>
-            <section class=supplier-item>
-                <a href="/suppliers/{{supplier.id}}"><button class="view-button  button-supplier">View Supplier Info</button></a>
             </section>
         </div>
         
     </article>
+    <section class=supplier-item>
+        <a href="/suppliers/{{supplier.id}}"><button class="view-button  button-supplier">View Supplier Info</button></a>
+    </section>
     <hr>
     <hr>
     
