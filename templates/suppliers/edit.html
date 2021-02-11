@@ -24,28 +24,28 @@
             <label for="name">Supplier Name:</label>
         </section>
         <section>
-            <input type="text" id="name" name="name" required value="{{supplier.name}}">
+            <input type="text" id="name" name="name"  value="{{supplier.name}}">
         </section>
 
         <section>
             <label for="address">Address:</label>
         </section>
         <section>
-            <textarea id="address" name="address" rows="5" cols="30" required>{{supplier.address}}</textarea>
+            <textarea id="address" name="address" rows="5" cols="30" >{{supplier.address}}</textarea>
         </section>
 
         <section>
             <label for="phone_number">Phone Number (please use a 07123-123-123 format):</label>
         </section>
         <section>
-            <input type="tel" id="phone_number" name="phone_number"  pattern="[0-9]{5}-[0-9]{3}-[0-9]{3}"  required value="{{supplier.phone_number}}">
+            <input type="tel" id="phone_number" name="phone_number"  pattern="[0-9]{5}-[0-9]{3}-[0-9]{3}"   value="{{supplier.phone_number}}">
         </section>
 
         <section>
             <label for="product">Products:</label>
         </section>
         <section>
-            <input type="text" id="product" name="product" required value="{{supplier.product}}">
+            <input type="text" id="product" name="product"  value="{{supplier.product}}">
         </section>  
         
         <section class="add-update-button-container">
