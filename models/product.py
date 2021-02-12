@@ -11,6 +11,12 @@ class Product:
         self.minimum_stock_level = minimum_stock_level
         self.supplier = supplier
         self.id = id
+
+
+    #use a markup % and the cost price to calculate the sale price of a product.
+    #use the calculation (cost price * 70%) + cost price = sale price
+    #use the cost price and the markup given by the user input in add new product/ edit product
+    #show the sale price calculated on the inventory page for the product.
         
     @classmethod
     def set_markup(cls, unit_price, percentage):
