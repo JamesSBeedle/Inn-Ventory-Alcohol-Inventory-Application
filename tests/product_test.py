@@ -4,7 +4,7 @@ from models.product import Product
 class TestProduct(unittest.TestCase):
 
     def setUp(self):
-        self.product = Product("Landlord", "Draught", 12, 1.23, 3.00, "A Strong Pale Ale", "Timothy Taylors" )
+        self.product = Product("Landlord", "Draught", 12, 1.23, 3.00, "A Strong Pale Ale",12, "Timothy Taylors" )
 
 
     def test_has_name(self):
